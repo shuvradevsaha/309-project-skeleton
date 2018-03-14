@@ -1,0 +1,23 @@
+<html>
+    
+    <head>
+        <title>New Article form></title>
+    </head>
+<body> 
+<h1>Create new articles</h1>
+<p>Title</p>
+<input type=  "test" id="title"/><br/>
+<p>Content</p>
+<testarea id= "context">Add content</testarea><br/>
+<button id= "submit">Submit</button>
+<script src= "/lib/jquery/dist/jquery.min.js"></script>
+<script>
+    $('#submit').click(function(){
+        console.log('sumit clicked');
+        newArticle.title= $('#title').val();
+    }
+    )
+    
+</script>
+</body>
+</html>

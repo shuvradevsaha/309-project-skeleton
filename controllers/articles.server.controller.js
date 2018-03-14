@@ -3,13 +3,18 @@ var Article = require('./../models/Article.js');
 var errorHandler = require('./errors.server.controller');
 var _ = require('lodash');
 
+module.exports.Createview=function(req, res) {
+	res.render('./../public/vies/article/new.ejs', {
+		user: req.user || null,
+		request: req,
+	});
+};
 module.exports.listview=function(req, res) {
 	res.render('./../public/vies/article/all.ejs', {
 		user: req.user || null,
 		request: req,
-		articles: data
 	});
-}
+};
 
 module.exports.list = function(req, res) {
   Article.find(function(err, data) {
